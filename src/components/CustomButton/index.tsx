@@ -1,6 +1,12 @@
 import React from 'react';
 import { CustomButtonContainer } from './styles';
 
-export const CustomButton = () => {
-  return <CustomButtonContainer>Clique aqui!</CustomButtonContainer>;
+export interface CustomButtonProps {
+  text: string;
+  tipo?: 'primario' | 'secundario';
+  onClick?: () => void;
+}
+
+export const CustomButton = ({text, onClick, tipo = "primario"}: CustomButtonProps) => {
+  return <CustomButtonContainer tipo={tipo} onClick={onClick}>{text}</CustomButtonContainer>;
 };
