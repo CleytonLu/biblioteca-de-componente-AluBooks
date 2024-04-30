@@ -6,7 +6,7 @@ export interface CustomEmailProps{
     placeholder: string;
     value: string;
     setValue: Dispatch<SetStateAction<string>>;
-    type?: "text" | "email" | "password" | "date";
+    type?: "text" | "email" | "password" | "date" | "tel";
 }
 
 export const CustomInput = ({label, placeholder = "seuemail@email.com", value, setValue, type = "text"}: CustomEmailProps) => {
