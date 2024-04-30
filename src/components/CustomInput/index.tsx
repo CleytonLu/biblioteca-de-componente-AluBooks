@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from "react"
+import React, { ChangeEvent, Dispatch, SetStateAction } from "react"
 import { CustomEmailContainer, Input, Label } from "./styles";
 
 export interface CustomEmailProps{
@@ -17,7 +17,7 @@ export const CustomInput = ({label, placeholder = "seuemail@email.com", value, s
                 type={type}
                 placeholder={placeholder}
                 value={value}
-                onChange={(e) => setValue(e.target.value)}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
             />
         </CustomEmailContainer>
     );
